@@ -2,9 +2,9 @@ import requests
 import json
 import logging
 
-'''
+"""
 Setting up logging in dev mode to catch everything properlly in the console
-'''
+"""
 logging.basicConfig(
     level=logging.DEBUG,
     format='%(levelname)s - %(message)s'
@@ -16,7 +16,7 @@ logging.basicConfig(
 url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
 
 
-''' 
+""" 
 Fetch data from ESPN website
 
 ARGS:
@@ -26,7 +26,7 @@ ARGS:
 OUTPUT:
     Returns a list of dictionary in JSON format
 
-'''
+"""
 def fetch_data(url: str, timeout: float = 10) -> list[dict]:
     try:
         response = requests.get(url, timeout=timeout)
@@ -35,18 +35,16 @@ def fetch_data(url: str, timeout: float = 10) -> list[dict]:
         return response.json()
         
     except requests.RequestException as e:
-        logging.error(f'An erroe occurred while fetchind data: {e}')
+        logging.error(f'An error occurred while fetching data: {e}')
 
-    except requests.exceptions as e:
-        logging.error(f'Error occurred due to: {e}')
 
-''' 
+""" 
 Store the list from fetch data function to a variable for further parsing
-'''
+"""
 data = fetch_data(url) 
 
 
-''''
+"""'
 Extract events from the ESBN website with error handling
 
 ARGS:
@@ -55,13 +53,14 @@ ARGS:
 OUTPUT:
     Returns a list containing the events of NBA.
 
-'''
+"""
 
-def extract_event(events: list = data.get("events", [])) -> list:
+def extract_event(events: list | None) -> list:
     try:
-        if not isinstance(events,list):
-            logging.warning(f'Data not fetched correctly as JSON: {type(events)}')
-
+        if events is None:
+            events = []
+            logging.warning('Events is empty')
+        
         extracted = []
         i = 1
 
@@ -107,11 +106,7 @@ def extract_event(events: list = data.get("events", [])) -> list:
 
     except Exception as e:
         logging.error(f'An error occurred while extracting event: {e}') 
->>>>>>> f8ac0ec (Refactor: Enhance error handling and logging in fetch_data and extract_event functions)
 
 
-
-
-
-extracted_list = extract_event()
+extracted_list = extract_event(events=data.get('events',[]))
 print(extracted_list)
