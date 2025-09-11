@@ -1,9 +1,11 @@
 import requests
 import json
 import logging
+from typing import Optional
+
 
 """
-Setting up logging in dev mode to catch everything properlly in the console
+Setting up logging in dev mode to catch everything properlly in the console.
 """
 logging.basicConfig(
     filename='projects.log',
@@ -11,20 +13,19 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-# Step 1: ESPN NBA Scoreboard API
 url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
 
 
 def fetch_data(url: str, timeout: float = 10) -> list[dict]:
     """ 
-    Fetch data from ESPN website
+    Fetch data from ESPN website.
 
     ARGS:
-        url: The URL of the website
-        timeout: 10 seconds before timeout
+        url (str): The URL of the website.
+        timeout (float): 10 seconds before timeout.
 
     OUTPUT:
-        Returns a list of dictionary in JSON format
+        Returns a list of dictionary in JSON format.
 
     """
     try:
@@ -46,10 +47,10 @@ data = fetch_data(url)
 
 def extract_event(events: list | None) -> list:  
     """
-    Extract events from the ESBN website with error handling
+    Extract events from the ESBN website with error handling.
 
     ARGS:
-        events: A list that contains dictioaries of the event key in the data
+        events: A list that contains dictioaries of the event key in the data.
 
     OUTPUT:
         Returns a list containing the events of NBA.
@@ -103,8 +104,17 @@ def extract_event(events: list | None) -> list:
 extracted_list = extract_event(events=data.get('events',[]))
 
 
-def save_to_json(data: list | None, filename: str = 'events.json'):
-    """ Save data to JSON """
+def save_to_json(data: Optional[list], filename: str = 'events.json'):
+    """ 
+    Save extracted data to JSON. 
+
+    Args:
+        data (list) : List containing extracted events data.
+        filename (str) : File name to save the data in.
+
+    Return:
+        Saved data to file.
+    """
     with open(filename, 'w', newline='') as file:
         json.dump(data, file, indent=2)
 
