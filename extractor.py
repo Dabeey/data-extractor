@@ -3,7 +3,7 @@ import json
 import logging
 
 '''
-Setting up logging in dev mode to catch everything in the console
+Setting up logging in dev mode to catch everything properlly in the console
 '''
 logging.basicConfig(
     level=logging.DEBUG,
@@ -16,7 +16,17 @@ logging.basicConfig(
 url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
 
 
-''''''
+''' 
+Fetch data from ESPN website
+
+ARGS:
+    url: The URL of the website
+    timeout: 10 seconds before timeout
+
+OUTPUT:
+    Returns a list of dictionary in JSON format
+
+'''
 def fetch_data(url: str, timeout: float = 10) -> list[dict]:
     try:
         response = requests.get(url, timeout=timeout)
@@ -30,9 +40,22 @@ def fetch_data(url: str, timeout: float = 10) -> list[dict]:
     except requests.exceptions as e:
         logging.error(f'Error occurred due to: {e}')
 
-    
-data = fetch_data(url)
+''' 
+Store the list from fetch data function to a variable for further parsing
+'''
+data = fetch_data(url) 
 
+
+''''
+Extract events from the ESBN website with error handling
+
+ARGS:
+    events: A list that contains dictioaries of the event key in the data
+
+OUTPUT:
+    Returns a list containing the events of NBA.
+
+'''
 
 def extract_event(events: list = data.get("events", [])) -> list:
     try:
