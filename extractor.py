@@ -109,12 +109,19 @@ def save_to_json(data: Optional[list], filename: str = 'events.json'):
     Save extracted data to JSON. 
 
     Args:
-        data (list) : List containing extracted events data.
-        filename (str) : File name to save the data in.
+        data (Optional[list]) : List containing extracted events data.
+        filename (str) : File name to save the data in. Default is 'events.json'
 
     Return:
-        Saved data to file.
+        None
+
+    Side Effect:
+        Creates or overwrites a JSON file on disk
     """
+    if data is None:
+        data = []
+        logging.warning('Data does not exist. Check empty list and try again')
+        
     with open(filename, 'w', newline='') as file:
         json.dump(data, file, indent=2)
 

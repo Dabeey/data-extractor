@@ -3,3 +3,13 @@
 2025-09-11 17:56:14,539 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard
 2025-09-11 17:56:14,543 - INFO - Event 1 ID: 401812480 | Date: 2025-10-02T16:00Z | Venue: Etihad Arena | Teams: Knicks vs 76ers
 2025-09-11 17:56:14,544 - INFO - Event 2 ID: 401812481 | Date: 2025-10-03T09:30Z | Venue: Rod Laver Arena | Teams: Pelicans vs Melbourne United
+2025-09-11 22:46:46,449 - DEBUG - Starting new HTTPS connection (1): site.api.espn.com:443
+2025-09-11 22:46:49,845 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/basketball/nba/scoreboard HTTP/1.1" 200 2144
+2025-09-11 22:46:49,847 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard
+2025-09-11 22:46:49,851 - INFO - Event 1 ID: 401812480 | Date: 2025-10-02T16:00Z | Venue: Etihad Arena | Teams: Knicks vs 76ers
+2025-09-11 22:46:49,853 - INFO - Event 2 ID: 401812481 | Date: 2025-10-03T09:30Z | Venue: Rod Laver Arena | Teams: Pelicans vs Melbourne United
+2025-09-11 22:46:51,392 - DEBUG - Starting new HTTPS connection (1): site.api.espn.com:443
+2025-09-11 22:46:52,327 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/basketball/nba/scoreboard HTTP/1.1" 200 2144
+2025-09-11 22:46:52,329 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard
+2025-09-11 22:46:52,332 - INFO - Event 1 ID: 401812480 | Date: 2025-10-02T16:00Z | Venue: Etihad Arena | Teams: Knicks vs 76ers
+2025-09-11 22:46:52,333 - INFO - Event 2 ID: 401812481 | Date: 2025-10-03T09:30Z | Venue: Rod Laver Arena | Teams: Pelicans vs Melbourne United
