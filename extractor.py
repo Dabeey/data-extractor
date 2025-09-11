@@ -17,28 +17,19 @@ data = fetch_data(url)
 
 def extract_event(events: list = data.get("events", [])) -> list: 
     extracted = []
-
     i = 1
+
     for event in events: 
-        try:
-            event_id = event.get("id", "N/A")
-            date = event.get("date", "N/A")
+        event_id = event.get("id", "N/A")
+        date = event.get("date", "N/A")
 
-            # competitions is always a list, but still defensive
-            competitions = event.get("competitions", [])
-            if not competitions:
-                print(f"Skipping Event {i}: no competitions data")
-                continue
+        competitions = event.get("competitions", [])
+        venue = competitions[0].get("venue", {}).get("fullName", "Unknown Venue") if competitions else "Unknown Venue"
 
-            venue = competitions[0].get("venue", {}).get("fullName", "Unknown Venue")
-            competitors = competitions[0].get("competitors", [])
-            if len(competitors) < 2:
-                print(f"Skipping Event {i}: missing competitors")
-                continue
+        competitors = competitions[0].get("competitors", []) if competitions else []
+        teams = [competitor.get("team", {}).get("shortDisplayName", "Unknown") for competitor in competitors]
 
-            teams = [competitor.get("team", {}).get("shortDisplayName", "Unknown") 
-                     for competitor in competitors]
-
+        if len(teams) >= 2:
             upcoming_event = (
                 f'Event {i} ID: {event_id} | Date: {date} | '
                 f'Venue: {venue} | Teams: {teams[0]} vs {teams[1]}'
@@ -51,13 +42,13 @@ def extract_event(events: list = data.get("events", [])) -> list:
                 'venue': venue,
                 'teams': f'{teams[0]} vs {teams[1]}',
             })
-
-        except Exception as e:
-            print(f"⚠️ Skipping Event {i} due to error: {e}")
+        else:
+            print(f"Skipping Event {i}: missing team data")
 
         i += 1
 
     return extracted
+
 
 
 extracted_list = extract_event()
