@@ -1,15 +1,9 @@
-import json
-from typing import Optional
-
-
-
-url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
+from utils.logger import logging
 
 
 """ 
 Store the list from fetch data function to a variable for further parsing
 """
-data = fetch_data(url) 
 
 
 
@@ -67,7 +61,3 @@ def extract_event(events: list | None) -> list:
             logging.error(f'An error occurred while extracting event {i}: {e}') 
 
     return extracted
-
-
-extracted_list = extract_event(events=data.get('events',[]))
-
