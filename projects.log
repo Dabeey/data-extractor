@@ -13,3 +13,26 @@
 2025-09-11 22:46:52,329 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard
 2025-09-11 22:46:52,332 - INFO - Event 1 ID: 401812480 | Date: 2025-10-02T16:00Z | Venue: Etihad Arena | Teams: Knicks vs 76ers
 2025-09-11 22:46:52,333 - INFO - Event 2 ID: 401812481 | Date: 2025-10-03T09:30Z | Venue: Rod Laver Arena | Teams: Pelicans vs Melbourne United
+2025-09-11 22:54:26,755 - DEBUG - Starting new HTTPS connection (1): site.api.espn.com:443
+2025-09-11 22:54:33,292 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/football/nfl/scoreboard HTTP/1.1" 200 81056
+2025-09-11 22:54:33,668 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard
+2025-09-11 22:54:33,709 - INFO - Event 1 ID: 401772936 | Date: 2025-09-12T00:15Z | Venue: Lambeau Field | Teams: Packers vs Commanders
+2025-09-11 22:54:33,710 - INFO - Event 2 ID: 401772725 | Date: 2025-09-14T17:00Z | Venue: Paycor Stadium | Teams: Bengals vs Jaguars
+2025-09-11 22:54:33,710 - INFO - Event 3 ID: 401772834 | Date: 2025-09-14T17:00Z | Venue: AT&T Stadium | Teams: Cowboys vs Giants
+2025-09-11 22:54:33,710 - INFO - Event 4 ID: 401772835 | Date: 2025-09-14T17:00Z | Venue: Ford Field | Teams: Lions vs Bears
+2025-09-11 22:54:33,710 - INFO - Event 5 ID: 401772724 | Date: 2025-09-14T17:00Z | Venue: Nissan Stadium | Teams: Titans vs Rams
+2025-09-11 22:54:33,710 - INFO - Event 6 ID: 401772728 | Date: 2025-09-14T17:00Z | Venue: Hard Rock Stadium | Teams: Dolphins vs Patriots
+2025-09-11 22:54:33,710 - INFO - Event 7 ID: 401772833 | Date: 2025-09-14T17:00Z | Venue: Caesars Superdome | Teams: Saints vs 49ers
+2025-09-11 22:54:33,710 - INFO - Event 8 ID: 401772727 | Date: 2025-09-14T17:00Z | Venue: MetLife Stadium | Teams: Jets vs Bills
+2025-09-11 22:54:33,710 - INFO - Event 9 ID: 401772836 | Date: 2025-09-14T17:00Z | Venue: Acrisure Stadium | Teams: Steelers vs Seahawks
+2025-09-11 22:54:33,710 - INFO - Event 10 ID: 401772726 | Date: 2025-09-14T17:00Z | Venue: M&T Bank Stadium | Teams: Ravens vs Browns
+2025-09-11 22:54:33,711 - INFO - Event 11 ID: 401772729 | Date: 2025-09-14T20:05Z | Venue: Lucas Oil Stadium | Teams: Colts vs Broncos
+2025-09-11 22:54:33,711 - INFO - Event 12 ID: 401772730 | Date: 2025-09-14T20:05Z | Venue: State Farm Stadium | Teams: Cardinals vs Panthers
+2025-09-11 22:54:33,711 - INFO - Event 13 ID: 401772837 | Date: 2025-09-14T20:25Z | Venue: GEHA Field at Arrowhead Stadium | Teams: Chiefs vs Eagles
+2025-09-11 22:54:33,711 - INFO - Event 14 ID: 401772919 | Date: 2025-09-15T00:20Z | Venue: U.S. Bank Stadium | Teams: Vikings vs Falcons
+2025-09-11 22:54:33,711 - INFO - Event 15 ID: 401772715 | Date: 2025-09-15T23:00Z | Venue: NRG Stadium | Teams: Texans vs Buccaneers
+2025-09-11 22:54:33,711 - INFO - Event 16 ID: 401772811 | Date: 2025-09-16T02:00Z | Venue: Allegiant Stadium | Teams: Raiders vs Chargers
+2025-09-11 22:58:29,947 - DEBUG - Starting new HTTPS connection (1): site.api.espn.com:443
+2025-09-11 22:58:31,506 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/hockey/nhl/scoreboard HTTP/1.1" 200 2118
+2025-09-11 22:58:31,507 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard
+2025-09-11 22:58:31,509 - INFO - Event 1 ID: 401801790 | Date: 2025-09-20T23:00Z | Venue: American Airlines Center | Teams: Stars vs Blues
