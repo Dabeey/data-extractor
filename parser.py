@@ -1,17 +1,8 @@
 import requests
 import json
-import logging
 from typing import Optional
 
 
-"""
-Setting up logging in dev mode to catch everything properlly in the console.
-"""
-logging.basicConfig(
-    filename='projects.log',
-    level=logging.DEBUG,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
 
 url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
 
