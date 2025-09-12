@@ -1,5 +1,5 @@
 import requests
-
+from utils.logger import logging
 
 def fetch_data(url: str, timeout: float = 10) -> list[dict]:
     """ 
