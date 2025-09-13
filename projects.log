@@ -36,3 +36,8 @@
 2025-09-11 22:58:31,506 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/hockey/nhl/scoreboard HTTP/1.1" 200 2118
 2025-09-11 22:58:31,507 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard
 2025-09-11 22:58:31,509 - INFO - Event 1 ID: 401801790 | Date: 2025-09-20T23:00Z | Venue: American Airlines Center | Teams: Stars vs Blues
+2025-09-12 12:32:00,729 - DEBUG - Starting new HTTPS connection (1): site.api.espn.com:443
+2025-09-12 12:32:06,112 - DEBUG - https://site.api.espn.com:443 "GET /apis/site/v2/sports/basketball/nba/scoreboard HTTP/1.1" 200 2144
+2025-09-12 12:32:06,115 - INFO - Successfully fetched data from https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard
+2025-09-12 12:32:06,119 - INFO - Event 1 ID: 401812480 | Date: 2025-10-02T16:00Z | Venue: Etihad Arena | Teams: Knicks vs 76ers
+2025-09-12 12:32:06,120 - INFO - Event 2 ID: 401812481 | Date: 2025-10-03T09:30Z | Venue: Rod Laver Arena | Teams: Pelicans vs Melbourne United
