@@ -1,8 +1,10 @@
 from utils.logger import logging
 from fetcher import fetch_data
 from parser import extract_event
-from storage import save_to_json
+from storage import save_to_json,save_to_csv
 import argparse
+
+
 
 if __name__=='__main__':
 
@@ -20,4 +22,4 @@ if __name__=='__main__':
     if args.storage == 'json':
         save_to_json(data)
     else:
-        save_to_
+        save_to_csv(data)
