@@ -1,6 +1,7 @@
 import json
 from typing import Optional
 from utils.logger import logging
+import csv
 
 def save_to_json(data: Optional[list], filename: str = 'events.json'):
     """ 
@@ -24,5 +25,8 @@ def save_to_json(data: Optional[list], filename: str = 'events.json'):
         json.dump(data, file, indent=2)
 
 
-    def save_to_csv():
+    def save_to_csv(data: Optional[list], filename='events.csv'):
+        with open(filename,'w',newline='') as file:
+            fields = []
+            writer = csv.
         pass
