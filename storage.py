@@ -27,7 +27,7 @@ def save_to_json(data: Optional[list], filename: str = 'events.json'):
 
     def save_to_csv(data: Optional[list], filename='events.csv'):
         with open(filename,'w',newline='') as file:
-            fieldnames = []
+            fieldnames = ['id', 'date', 'venue','teams']
             writer = csv.DictWriter(data,fieldnames=fieldnames)
             writer.writeheader()
             writer.writerows(data)
