@@ -22,3 +22,7 @@ def save_to_json(data: Optional[list], filename: str = 'events.json'):
         
     with open(filename, 'w', newline='') as file:
         json.dump(data, file, indent=2)
+
+
+    def save_to_csv():
+        pass
