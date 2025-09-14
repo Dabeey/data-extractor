@@ -15,6 +15,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--storage',choices=['json','csv'], default='json', help='Choose output storage format')
+    parser.add_argument('--filename',default='output',help='Base filename for the output file')
     args = parser.parse_args()
 
     if args.storage == 'json':
