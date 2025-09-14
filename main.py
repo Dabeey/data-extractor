@@ -5,9 +5,7 @@ from storage import save_to_json,save_to_csv
 import argparse
 
 
-
-if __name__=='__main__':
-
+def main():
     url = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard"
 
     data = fetch_data(url) 
@@ -23,3 +21,8 @@ if __name__=='__main__':
         save_to_json(data)
     else:
         save_to_csv(data)
+
+
+if __name__=='__main__':
+    main()
+    
